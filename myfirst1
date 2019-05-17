@@ -1,0 +1,51 @@
+#importing files=======================================================================================================================
+from tkinter import *
+frame=Tk()
+frame.title("CALCULATOR")
+======================================================================================================================================
+#defining operations==================================================================================================================
+def add():
+    a=float(num1.get())
+    b=float(num2.get())
+    lb3.configure(text=a+b)
+    
+def subtract():
+    a=float(num1.get())
+    b=float(num2.get())
+    lb3.configure(text=a-b)
+
+def product():
+    a=float(num1.get())
+    b=float(num2.get())
+    lb3.configure(text=a*b)
+
+def division():
+    a=float(num1.get())
+    b=float(num2.get())
+    lb3.configure(text=a/b)
+======================================================================================================================================
+#creating buttons=====================================================================================================================
+lb1=Label(frame,text="ADD/SUBTRACT/PRODUCT/DIVISION")
+lb1.pack()
+
+num1=Entry(frame)
+num1.pack()
+
+num2=Entry(frame)
+num2.pack()
+
+b1=Button(frame,text="ADD",command=add)
+b1.pack()
+
+b1=Button(frame,text="SUBTRACT",command=subtract)
+b1.pack()
+b1=Button(frame,text="PRODUCT",command=product)
+b1.pack()
+b1=Button(frame,text="DIVISION",command=division)
+b1.pack()
+
+lb3=Label(frame,text=0)
+lb3.pack()
+
+frame.mainloop()
+======================================================================================================================================
